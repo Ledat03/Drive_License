@@ -1,0 +1,42 @@
+<!-- components/header.html -->
+<header id="desktop-menu" class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50 transition-all duration-300 dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="hidden md:flex items-center">
+        <a href="#" class="text-2xl font-bold text-primary">
+          <img id="logo-light" src="public/images/logo.png" alt="Logo" class="h-7 md:h-9 dark:hidden">
+          <img id="logo-dark" src="public/images/logo2.png" alt="Logo" class="h-7 md:h-9 hidden dark:block">
+        </a>
+      </div>
+
+      <!-- Menu -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#trang-chu" class="nav-link">Trang chủ</a>
+        <a href="#dich-vu" class="nav-link">Dịch vụ</a>
+        <a href="#quy-trinh" class="nav-link">Quy trình</a>
+        <a href="#cau-hoi" class="nav-link">Câu hỏi thường gặp</a>
+        <a href="#lien-he" class="nav-link">Liên hệ</a>
+      </nav>
+
+      <!-- Nút CTA và Dark Mode Toggle -->
+      <div class="hidden md:flex items-center space-x-4">
+        <button onclick="document.getElementById('lien-he').scrollIntoView({ behavior: 'smooth' });" 
+          class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-primary/90">
+          Đổi Giấy Phép Ngay
+        </button>
+      </div>
+
+      <!-- Hamburger Menu cho mobile -->
+      <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
+        <i class="ri-menu-line"></i>
+      </button>
+
+      <!-- Chuyển chế độ -->
+      <button onclick="toggleDarkMode()" class="text-xl">
+        <i class="ri-sun-line hidden dark:inline"></i>
+        <i class="ri-moon-line dark:hidden"></i>
+      </button>
+    </div>
+  </div>
+</header>
